@@ -8,19 +8,15 @@ const library = [
 
 // Soal A
 function findBookStatus(bookTitle) {
-  if (bookTitle == undefined) {
-    let book = library.find(book => book.title == bookTitle);
-    if (book.status == true) {
-      return console.log("Book of " + book.title + " is AVAILABLE");
-    } else {
-      return console.log("Book of " + book.title + " is NOT AVAILABLE");
-    }
+  let book = library.find(book => book.title == bookTitle);
+  if (book.status == true) {
+    return console.log("Book of " + book.title + " is AVAILABLE");
+  } else {
+    return console.log("Book of " + book.title + " is NOT AVAILABLE");
   }
-  // if the book's title is not found
-  return console.log("The book that you have searched is not found!");
 }
 
-findBookStatus("One Punch");
+findBookStatus("One Punch Man");
 
 // Soal B
 function findBooksAvailability(boolean) {
